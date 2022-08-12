@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-    internal class MiltiClub
+    internal class MiltiClub : Members
     {
+        public MiltiClub(int membershipPoints)
+        {
+            MembershipPoints = membershipPoints;
+        }
+    
+        public int MembershipPoints { get; set; }
+        
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-    internal class Members
+    public class Members
     {
     }
 }
