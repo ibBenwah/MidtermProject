@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-    public class Members
+    public abstract class Members
     {
+        public Members(int id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        public abstract void CheckIn(); 
+
     }
+
 }

@@ -8,14 +8,17 @@ namespace MidtermProject
 {
     public class SingleClub : Members
     {
-        public SingleClub(int clubIDNumber, string location)
+        public SingleClub(string location)
         {
-            ClubIDNumber = clubIDNumber;
+            
             Location = location;
         }
 
-        public int ClubIDNumber { get; set; }
+      
         public string Location { get; set; }
 
+
+        public abstract void CheckIn()
+        
     }
 }
