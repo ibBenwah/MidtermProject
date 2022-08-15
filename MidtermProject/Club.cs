@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-    public class Club
+    public class Club : Members
     {
-        public Club(string name, string address)
+        public Club(int id, string name, string address) : base (id, address)
         {
             Name = name;
             Address = address;
