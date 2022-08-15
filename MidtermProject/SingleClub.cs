@@ -18,7 +18,7 @@ namespace MidtermProject
         public string Location { get; set; }
 
 
-        public abstract void CheckIn()
+        public abstract void CheckIn();
         
     }
 }
