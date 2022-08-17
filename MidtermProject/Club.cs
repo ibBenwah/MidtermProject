@@ -18,14 +18,23 @@ namespace MidtermProject
         public string Name { get; set; }
         public string Address { get; set; }
 
-     
-        
-        public Dictionary<string, string> userMembers = new Dictionary<string, string>();
-        public void AddMembers(string name, string address)
+        public static List<Club> GetClubList()
         {
+        List<Club> clubLocations = new List<Club>();
+            clubLocations.Add(new Club(1, "Grand Rapids", "123 Main"));
+            clubLocations.Add(new Club(2, "Grand Banks", "1222 Copper"));
 
-            userMembers.Add(name, address);
-
+            return clubLocations;
         }
+        
+
+        
+       
+
+        //add multi memebers
+        //public static void AddMultiMems(List<MultiClubMems> members, MultiClubMems member)
+
+        
     }
+
 }

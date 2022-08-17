@@ -8,12 +8,12 @@ namespace MidtermProject
 {
     public class MiltiClub : Members
     {
-        public MiltiClub(int id, string name, int membershipPoints) : base(id, name)
+        public MiltiClub(int id, string name, int membershipPoints) :base(id, name)
         {
             MembershipPoints = membershipPoints;
         }
 
-    public MiltiClub(int id, string name) : base(id, name)
+    public MiltiClub(int id, string name) //: base(id, name)
     {
     }
 

@@ -1,21 +1,21 @@
 using MidtermProject;
 
-var GoldClub = new Club(121, "Gold", "121 Main");
-Console.WriteLine("Enter new Member Name");
-string name = Console.ReadLine();
-Console.WriteLine("Please enter address");
-string address = Console.ReadLine();
-GoldClub.AddMembers(name, address);
+//var GoldClub = new Club(121, "Gold", "121 Main");
+//Console.WriteLine("Enter new Member Name");
+//string name = Console.ReadLine();
+//Console.WriteLine("Please enter address");
+//string address = Console.ReadLine();
+//GoldClub.AddMembers(name, address);
 
 
 //list of clubs
-foreach (var kvp in GoldClub.userMembers)
-{
-    Console.WriteLine(kvp.Key);
-    Console.WriteLine(kvp.Value);
-}
+
+foreach (mem)
+
 Console.WriteLine();
 Console.WriteLine("Welcome to Grand Circus Fitness!");
+
+
 
 
 
