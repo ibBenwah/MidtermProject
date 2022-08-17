@@ -29,12 +29,6 @@ namespace MidtermProject
         
 
         
-       
-
-        //add multi memebers
-        //public static void AddMultiMems(List<MultiClubMems> members, MultiClubMems member)
-
-        
     }
 
 }
