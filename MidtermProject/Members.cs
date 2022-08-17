@@ -6,25 +6,32 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-    public abstract class Members
+    public class Members
     {
-        public Members(int id, string name, string membershipType)
+        public Members(int id, string name)
         {
             Id = id;
             Name = name;
-            MembershipType = membershipType;
         }
         public int Id { get; set; }
         public string Name { get; set; }
-        public string MembershipType { get; set; }
 
         //public abstract void CheckIn(); 
 
+        public List<Members> newMembers = new List<Members>();
+        public void AddMembers(int a, string b)
+        {
+            new Members(a, b);
+        }
 
 
+        //public void AddMembers(int a, string b, string c)
+        //{
+        //   new Members(a, b, c);
+        //}
 
 
 
     }
-
 }
+

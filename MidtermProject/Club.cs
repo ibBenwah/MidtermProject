@@ -6,29 +6,19 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-    public class Club : Members
+    public class Club
     {
-        public Club(int id, string name, string address) : base(id, address)
+        public Club(int id, string name, string address)
         {
-            Id = id;
             Name = name;
             Address = address;
         }
-        //possibly add club to these to seperate from members
+
         public string Name { get; set; }
         public string Address { get; set; }
 
-        public static List<Club> GetClubList()
-        {
-        List<Club> clubLocations = new List<Club>();
-            clubLocations.Add(new Club(1, "Grand Rapids", "123 Main"));
-            clubLocations.Add(new Club(2, "Grand Banks", "1222 Copper"));
 
-            return clubLocations;
-        }
-        
 
-        
     }
 
 }

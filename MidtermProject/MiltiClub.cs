@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-    public class MiltiClub : Members
+    public class MultiClub : Members
     {
-        public MiltiClub(int id, string name, int membershipPoints) :base(id, name)
+        public MultiClub(int id, string name, int membershipPoints) : base(id, name)
         {
             MembershipPoints = membershipPoints;
         }
 
-    public MiltiClub(int id, string name) //: base(id, name)
-    {
-    }
+        public MultiClub(int id, string name) : base(id, name)
+        {
+        }
 
-    public int MembershipPoints { get; set; }
-        
+        public int MembershipPoints { get; set; }
+
 
     }
 }
