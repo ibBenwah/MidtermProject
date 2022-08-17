@@ -19,23 +19,8 @@ namespace MidtermProject
         //public abstract void CheckIn(); 
 
         new List<Members> NewMember = new List<Members>();
-        public List<Members> AddMembers()
-        {
-            NewMember.Add();
-            return NewMember; 
-        }
-        //public List<Members> AddMembers(string name, string address, string membershipType)
-        //{
-        //    Console.WriteLine("Enter new Member Name");
-        //    name = Console.ReadLine();
-        //    Console.WriteLine("Please enter address");
-        //    address = Console.ReadLine();
-        //    Console.WriteLine("Please enter Membership Type");
-        //    membershipType = Console.ReadLine();
-        //    var NewMember = new List<Members>();
-        //    return NewMember;
-
-        //}
+      
+     
 
 
     }
