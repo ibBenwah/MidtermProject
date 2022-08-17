@@ -26,8 +26,6 @@ namespace MidtermProject
 
             userMembers.Add(name, address);
 
-
-          
         }
     }
 }
