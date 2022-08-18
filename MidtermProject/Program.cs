@@ -1,22 +1,19 @@
 using MidtermProject;
 
-//var GoldClub = new Club(121, "Gold", "121 Main");
-//Console.WriteLine("Enter new Member Name");
-//string name = Console.ReadLine();
-//Console.WriteLine("Please enter address");
-//string address = Console.ReadLine();
-//GoldClub.AddMembers(name, address);
 
+//FitnessHandler.AddMember(123, "Garret");
+//FitnessHandler.AddMember(124, "Kevin");
+//FitnessHandler.AddMember(125, "Colin");
+//Member member1 = new Member(123, "Garret");
+//Console.WriteLine(member1.Name);
 
-//list of clubs
-
-foreach (mem)
-
-Console.WriteLine();
-Console.WriteLine("Welcome to Grand Circus Fitness!");
+List<Member> memberList = new List<Member>();
+//List<Member> memberList = new List<Member>() { member1};
 
 
 
+
+FitnessHandler.AddMember(1234, "Bill Muarry");
 
 
 
@@ -27,25 +24,12 @@ Console.WriteLine("Welcome to Grand Circus Fitness!");
 
 
 
-//// Create a new Club object with the name "Grand Circus" and the address "123 Main St.".
-//Club club = new Club("Grand Circus", address: "5155 Downtown Ave ");
-//// Print the name of the club to the console.
-//Console.WriteLine(club.Name);
-//// Print the address of the club to the console.
-//Console.WriteLine(club.Address);
-//// Create a new Club object with the name "Happy Days" and the address "555 Dreamland Dr.".
-//Club club2 = new Club("Happy Days", address: "333 Forest Hill Dr.");
-//// Print the name of the club to the console.
-//Console.WriteLine(club2.Name);
-//// Print the address of the club to the console.
-//Console.WriteLine(club2.Address);
-//// Create a new Club object with the name "Grand Circus" and the address "123 Main St.".
-//Club club3 = new Club("Grand Circus", address: "56539 Downtown Ave ");
-//// Print the name of the club to the console.
-//Console.WriteLine(club3.Name);
-//// Print the address of the club to the console.
-//Console.WriteLine(club3.Address);
-//// Create a new Club object with the name "Happy Days" and the address "555 Dreamland Dr.".
-//Club club4 = new Club("Happy Days", address: "123456 Main St.");
+foreach(Member member in memberList)
+{
+
+    Console.WriteLine($"{member.Name}");
+   
+}
+
 
 

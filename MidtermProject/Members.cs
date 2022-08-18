@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-    public class Members
+    public class Member
     {
-        public Members(int id, string name)
+        public Member(int id, string name)
         {
             Id = id;
             Name = name;
@@ -18,11 +18,8 @@ namespace MidtermProject
 
         //public abstract void CheckIn(); 
 
-        public List<Members> newMembers = new List<Members>();
-        public void AddMembers(int a, string b)
-        {
-            new Members(a, b);
-        }
+        
+       
 
 
         //public void AddMembers(int a, string b, string c)

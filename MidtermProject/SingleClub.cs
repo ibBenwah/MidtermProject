@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-    public class SingleClub : Members
+    public class SingleClub : Member
     {
         public SingleClub(int id, string name, Club location) : base(id, name)
         {
