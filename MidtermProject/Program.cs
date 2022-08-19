@@ -19,17 +19,17 @@ FitnessHandler.AddMember(1234, "Bill Muarry");
 
 
 
+FitnessHandler.MemberInfo(1234);
 
 
 
 
+//foreach(Member member in FitnessHandler.memberList)
+//{
 
-foreach(Member member in memberList)
-{
-
-    Console.WriteLine($"{member.Name}");
+//    Console.WriteLine($"{member.Name} {mem}");
    
-}
+//}
 
 
 

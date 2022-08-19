@@ -13,6 +13,7 @@ namespace MidtermProject
             Id = id;
             Name = name;
         }
+        public static List<Member> memberList = new List<Member>();
         public int Id { get; set; }
         public string Name { get; set; }
 

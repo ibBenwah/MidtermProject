@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-    public class FitnessHandler
+    public static class FitnessHandler
     {
         public static List<Member> singleMemberList = new List<Member>();
         public static List<Member> memberList = new List<Member>();
+        public static List<Member> multiClubMembers = new List<Member>();
+        public static List<Member> singleClubMembers = new List<Member>();
+
 
         public static void AddMember(int a, string b)
         {
@@ -17,11 +20,19 @@ namespace MidtermProject
             memberList.Add(new Member(a, b));
         }
 
-        public static void MultiClubMember()
+        public static void MultiClubMember(int membershipPoints)
         {
-
+           // multiClubMembers.Add()
         }
 
+
+        public static void MemberInfo(int a)
+        {
+            foreach(Member member in memberList)
+            {
+                Console.WriteLine($"{member.Id} {member.Name}");
+            }
+        }
 
         //List<MultiClub> multiClubMembers = new List<MultiClub>();
         //List<SingleClub> singleClubMembers  = new List<SingleClub>();
