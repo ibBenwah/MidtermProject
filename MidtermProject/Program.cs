@@ -8,12 +8,13 @@ using MidtermProject;
 //Console.WriteLine(member1.Name);
 
 List<Member> memberList = new List<Member>();
+List<Club> clubInfo = new List<Club>();
 //List<Member> memberList = new List<Member>() { member1};
 
 
 
 
-FitnessHandler.AddMember(1234, "Bill Muarry");
+//FitnessHandler.AddMember(1234, "Bill Muarry");
 
 
 
@@ -21,14 +22,14 @@ FitnessHandler.AddMember(1234, "Bill Muarry");
 
 FitnessHandler.MemberInfo(1234);
 
+//Club.AddClubInfo();
 
-
-
-//foreach(Member member in FitnessHandler.memberList)
+Club.DisplayClubInfo();
+//foreach (var info in Club.clubInfo)
 //{
 
-//    Console.WriteLine($"{member.Name} {mem}");
-   
+//    Console.WriteLine($"{info.Id} {info.Name} {info.Address}");
+
 //}
 
 
