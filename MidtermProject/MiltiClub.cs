@@ -20,5 +20,11 @@ namespace MidtermProject
         public int MembershipPoints { get; set; }
 
 
+        public override void CheckIn(Club club)
+        {
+            Console.WriteLine($"{Name} has checked in to {club.Name}");
+            MembershipPoints ++; 
+            MembershipPoints += 0;
+        }
     }
 }

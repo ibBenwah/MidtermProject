@@ -6,20 +6,37 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-    public class SingleClub : Member
+  public class SingleClub : Member
+  {
+    public SingleClub(int id, string name, Club location)
     {
-        public SingleClub(int id, string name, Club location) : base(id, name)
-        {
 
-            Location = location;
-            //MembershipType = membershipType;
+      Location = location;
+      //   MembershipType = membershipType;
 
-        }
-
-
-
-
-        public Club Location { get; set; }
-        //public string MembershipType { get; set; }
     }
+
+    public override void CheckIn(Club club)
+    {
+      if (Location == club)
+      {
+        Console.WriteLine($"{Name} has checked in to {club.Name}");
+      }
+      else
+      {
+        Console.WriteLine($"{Name} is not member of {club.Name}");
+      }
+
+
+
+
+    }
+
+
+
+
+
+    public Club Location { get; set; }
+    //public string MembershipType { get; set; }
+  }
 }
