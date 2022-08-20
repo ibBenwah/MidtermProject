@@ -25,12 +25,7 @@ FitnessHandler.MemberInfo(1234);
 //Club.AddClubInfo();
 
 Club.DisplayClubInfo();
-//foreach (var info in Club.clubInfo)
-//{
 
-//    Console.WriteLine($"{info.Id} {info.Name} {info.Address}");
-
-//}
 
 
 

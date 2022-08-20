@@ -28,19 +28,13 @@ namespace MidtermProject
             new Club(95951, "Holland", "234 Hope St, Holland, MI 49345")
 
         };
-        
-        
-       
         public static void AddClubInfo(int a, string b, string c)
         {
             List<Club> clubInfo = new List<Club>();
             clubInfo.Add(new Club(12345, "Grand Rapids", "123 Main St, Grand Rapids, MI 49546"));
             clubInfo.Add(new Club(54321, "Seattle", "345 Bridge st, Seattle, WA 98544"));
             clubInfo.Add(new Club(95951, "Dothan", "456 Rucker Blvd, Dothan, AL 39330"));
-            clubInfo.Add(new Club(95951, "Holland", "234 Hope St, Holland, MI 49345"));
-          
-            
-            
+            clubInfo.Add(new Club(95951, "Holland", "234 Hope St, Holland, MI 49345"));   
         }
         public static void DisplayClubInfo()
         {
