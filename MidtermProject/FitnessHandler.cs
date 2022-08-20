@@ -12,12 +12,12 @@ namespace MidtermProject
     public static List<Member> memberList = new List<Member>();
     public static List<Member> multiClubMembers = new List<Member>();
     public static List<Member> singleClubMembers = new List<Member>();
-  
+
 
     public static void AddMember(int a, string b)
     {
 
-    //   memberList.Add(new Member(a, b));
+      //   memberList.Add(new Member(a, b));
     }
 
     public static void MultiClubMember(int membershipPoints)
@@ -38,9 +38,9 @@ namespace MidtermProject
     public static void RemoveMember(int id)
     {
       Console.WriteLine("Enter the ID of the member you would like to remove: ");
-      int idToRemove = int.Parse(s: Console.ReadLine());
       foreach (Member member in memberList)
       {
+        int idToRemove = int.Parse(Console.ReadLine());
         if (member.Id == idToRemove)
         {
           memberList.Remove(member);
