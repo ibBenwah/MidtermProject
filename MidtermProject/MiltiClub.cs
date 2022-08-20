@@ -26,5 +26,7 @@ namespace MidtermProject
             MembershipPoints ++; 
             MembershipPoints += 0;
         }
+
+       
     }
 }

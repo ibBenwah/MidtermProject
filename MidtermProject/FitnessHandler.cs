@@ -34,6 +34,11 @@ namespace MidtermProject
             }
         }
 
+        //remove member based off ID
+        public static void RemoveMember(int id)
+        {
+            memberList.Remove(id);
+        }
         //List<MultiClub> multiClubMembers = new List<MultiClub>();
         //List<SingleClub> singleClubMembers  = new List<SingleClub>();
         //public void AddMembersMulti(int id, string name)

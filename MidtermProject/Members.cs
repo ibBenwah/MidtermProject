@@ -25,13 +25,14 @@ namespace MidtermProject
 
 
         public abstract void CheckIn(Club club);
-        
 
-    
+       
       
 
-        
        
+        
+
+
 
 
         //public void AddMembers(int a, string b, string c)
