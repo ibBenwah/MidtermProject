@@ -8,11 +8,12 @@ namespace MidtermProject
 {
   public class SingleClub : Member
   {
-    public SingleClub(int id, string name, Club location)
+    public SingleClub(int id, string name, Club location) 
     {
-
+      Id = id;
+      Name = name;
       Location = location;
-      //   MembershipType = membershipType;
+      //MembershipType = membershipType;
 
     }
 
@@ -27,14 +28,7 @@ namespace MidtermProject
         Console.WriteLine($"{Name} is not member of {club.Name}");
       }
 
-
-
-
     }
-
-
-
-
 
     public Club Location { get; set; }
     //public string MembershipType { get; set; }
