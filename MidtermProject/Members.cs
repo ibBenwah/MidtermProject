@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-  public class Member
+  public abstract class Member
   {
     public Member(int id, string name, int membershipType)
     {
@@ -26,11 +26,8 @@ namespace MidtermProject
       return $"{Id} {Name} {MembershipType}";
     }
 
-    public void AddMembers(int a, string b, string c)
-    {
-      new Member(a, b, 0);
-    }
-
+  
+        public abstract void CheckIn(Club club);
 
 
   }

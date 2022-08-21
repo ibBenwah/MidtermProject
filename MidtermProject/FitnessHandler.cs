@@ -17,7 +17,7 @@ namespace MidtermProject
     public static void AddMember(int a, string b)
     {
 
-      //   memberList.Add(new Member(a, b));
+         //memberList.Add(new Member(a, b));
     }
 
     public static void MultiClubMember(int membershipPoints)
