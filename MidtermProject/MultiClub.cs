@@ -8,30 +8,33 @@ namespace MidtermProject
 {
   public class MultiClub : Member
   {
-    public int MembershipPoints { get; set; }
-    public MultiClub(int id, string name, int membershipPoints) : base(id, name, membershipPoints)
-    {
-      MembershipPoints = membershipPoints;
+        public MultiClub(int memberID, string name, int membershipType)
+        {
+            MemberID = memberID;
+            Name = name;
+            MembershipType = membershipType;
+        }
+
+        public int MembershipPoints { get; set; }
+        public int  MemberID { get; set; }
+        public int MembershipType { get; set; }
+        
+        public override void CheckIn()
+        {
+            
+        }
+
+
+
+
+        public virtual void CheckIn(Club club)
+        {
+            Console.WriteLine($"{Name} has checked in to {club.Name}");
+            MembershipPoints++;
+            MembershipPoints += 0;
+        }
+
+
     }
-
-    public MultiClub(int id, string name) : base(id, name, 0)
-    {
-      Id = id;
-      Name = name;
-      MembershipPoints = 0;
-    }
-
-
-
-
-    // public abstract void CheckIn(Club club)
-    // 
-    //   Console.WriteLine($"{Name} has checked in to {club.Name}");
-    //   MembershipPoints++;
-    //   MembershipPoints += 0;
-    // }
-
-
-  }
 }
 

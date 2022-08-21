@@ -6,19 +6,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-Console.WriteLine("Would you like to select a club or a member?");
+//Console.WriteLine("Would you like to select a club or a member?");
 // string userInput = Console.ReadLine();
 
 
+List<SingleClub> singleMemberList = new List<SingleClub>();
+List<MultiClub> multiClubMembers = new List<MultiClub>();
+List<Member> memberList = new List<Member>();
 
 
+FitnessHandler.AddMember(1, "Garret", 1);
 
 
-
-
-
-
-
+    FitnessHandler.MemberInfo();
 
 
 
@@ -31,24 +31,24 @@ Console.WriteLine("Would you like to select a club or a member?");
 
 
 // clubInfo.Add(new Club(1, "Fitness", "Fitness"));
-List<Member> memberList = new List<Member>();
-Member member1 = new Member(123, "Garret", 1);
-Member member2 = new Member(123, "Merck", 2);
-Member member3 = new Member(123, "John", 3);
-Member member4 = new Member(123, "Jane", 4);
-FitnessHandler.AddMember(123, "Garret");
-FitnessHandler.AddMember(123, "Merck");
-FitnessHandler.AddMember(124, "Kevin");
-FitnessHandler.AddMember(125, "John");
-FitnessHandler.AddMember(126, "Jane");
-FitnessHandler.AddMember(125, "Colin");
-Console.WriteLine(member1.Name);
-Console.WriteLine(member1.Id);
-Console.WriteLine(member1.MembershipType);
+//List<Member> memberList = new List<Member>();
+//Member member1 = new Member(123, "Garret", 1);
+//Member member2 = new Member(123, "Merck", 2);
+//Member member3 = new Member(123, "John", 3);
+//Member member4 = new Member(123, "Jane", 4);
+//FitnessHandler.AddMember(123, "Garret");
+//FitnessHandler.AddMember(123, "Merck");
+//FitnessHandler.AddMember(124, "Kevin");
+//FitnessHandler.AddMember(125, "John");
+//FitnessHandler.AddMember(126, "Jane");
+//FitnessHandler.AddMember(125, "Colin");
+//Console.WriteLine(member1.Name);
+//Console.WriteLine(member1.Id);
+//Console.WriteLine(member1.MembershipType);
 
-Console.WriteLine(member2.Name);
-Console.WriteLine(member2.Id);
-Console.WriteLine(member2.MembershipType);
+//Console.WriteLine(member2.Name);
+//Console.WriteLine(member2.Id);
+//Console.WriteLine(member2.MembershipType);
 
 
 
