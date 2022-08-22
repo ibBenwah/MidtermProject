@@ -8,12 +8,7 @@ namespace MidtermProject
 {
   public abstract class Member
   {
-    //public Member(int id, string name, int membershipType)
-    //{
-    //        Id = id;
-    //        Name = name;
-    //        MembershipType = membershipType;
-    //}
+        
 
 
         public int MemberID { get; set; }
