@@ -37,7 +37,7 @@ namespace MidtermProject
             {
                 Console.WriteLine("Please try to check in again, if you are not a member please join!");
             }//not 100% sure if this is on the right path but i feel like it is.  adds name to a new list if matches and if theres 1 name it works, not 1 then it stops
-           
+            // will need to add something to this to cross check whether they are at the right location or not as well.
         }
 
 

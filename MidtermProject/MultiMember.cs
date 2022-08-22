@@ -23,12 +23,21 @@ namespace MidtermProject
         //  Methods
         public override void CheckIn()
         {
+            Console.WriteLine("Welcome! what is your name? ");
+            var name = Console.ReadLine().ToLower();
+            List<MultiMember> checkMultiMembers = multiMembers.Where(x => x.Name.ToLower().Equals(name)).ToList();
+            if (checkMultiMembers.Count == 1)
+            {
+                Console.WriteLine("Enjoy your workout!");
+            }
+            else if (checkMultiMembers.Count != 1)
+            {
+                Console.WriteLine("Please try to check in again, if you are not a member please join!");
+            }
+
+
 
         }
-
-        
-
-    }
 
 }
 
