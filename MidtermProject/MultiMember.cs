@@ -6,54 +6,33 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-  public class MultiClub : Member
-  {
-        public MultiClub(int memberID, string name, int membershipType)
+    public class MultiMember : Member
+    {
+        public MultiMember(string name, int id)
         {
-            MemberID = memberID;
             Name = name;
-            MembershipType = membershipType;
+            Id = id;
         }
-
-        public MultiClub()
-        {
-            MemberID = 0;
-            Name = " ";
-            MembershipType = 1;
-        }
-
-        public MultiClub(int a, string b)
-        {
-        }
-
-        public static List<MultiClub> multiClubMembers = new List<MultiClub>();
         public int MembershipPoints { get; set; }
-        public int  MemberID { get; set; }
-        public int MembershipType { get; set; }
-        
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public static List<MultiMember> multiMembers = new List<MultiMember>();
+
+
+
+        //  Methods
         public override void CheckIn()
         {
-            
+
         }
 
-
-
-
-        public virtual void CheckIn(Club a)
+        public static void AddMember()
         {
-            foreach(var m in multiClubMembers) 
-            { 
-                if (MembershipType == 2)
-                { 
-                    Console.WriteLine($"{a.Name} has checked in to {a.Name}");
-                    MembershipPoints++;
-                    MembershipPoints += 0;
-                }
-            }
-            
-        }
 
+        }
 
     }
+
 }
+
 

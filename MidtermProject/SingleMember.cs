@@ -6,74 +6,91 @@ using System.Threading.Tasks;
 
 namespace MidtermProject
 {
-    public class SingleClub : Member
+    public class SingleMember : Member
     {
-        
-        public SingleClub(int memberID, string name, int membershipType)
+        //  Properties
+        public SingleMember(string name, int id)
         {
-            MemberID = memberID;
             Name = name;
-            MembershipType = membershipType;
+            //HomeClub = homeClub;
+            Id = id;
         }
+        public int HomeClub { get; set; }
+        public string Name { get; set; }
+        public int Id { get; set; }
+        public static List<SingleMember> singleMembers = new List<SingleMember>();
+        public static List<Member> allMembers = new List<Member>();
 
-        public SingleClub()
-        {
-            MemberID = 0;
-            Name = "";
-            MembershipType = 0;
-        }
+        //public List<Club> clubList = new List<Club>();
 
-        public SingleClub(int a, string b)
-        {
-        }
-
-        public int MemberID { get; set; }
-        public int MembershipType { get; set; }
-        public int HomeMembershipID { get; set; }
-        public static List<SingleClub> singleMemberList = new List<SingleClub>();
-
-
-
-
-
-        //public override void CheckIn(Club club)
-        //{
-        //    if ( == club)
-        //    {
-        //        Console.WriteLine($"{Name} has checked in to {club.Name}");
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine($"{Name} is not member of {club.Name}");
-        //    }
-        //}
-
-        public Club GetLocation(Club location)
-        {
-            return location;
-        }
-
-        // public override void CheckIn(Club club)
-        // {
-        //   if (Location == club)
-        //   {
-        //     Console.WriteLine($"{Name} has checked in to {club.Name}");
-        //   }
-        //   else
-        //   {
-        //     Console.WriteLine($"{Name} is not member of {club.Name}");
-        //   }
-        // }
-        
+        //  Methods
         public override void CheckIn()
         {
-            foreach(var m in singleMemberList)
-            {
-                //if(Club. 0)
-                //{
 
-                //}
+        }
+
+
+        public static void AddMember()
+        {
+            Console.WriteLine("Please enter the following member information to register yourself as a member: ");
+            Console.Write("Name: ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Membership type: (Single or MultiClub Membership? ");
+
+            string membershipType = Console.ReadLine();
+
+            bool isAddingMember = true;
+
+            while (isAddingMember)
+            {
+
+                if (membershipType == "Single")
+                {
+                    Console.WriteLine("Here are our list of gyms. Which one would you like to join? ");
+                    Club.DisplayClubInfo();
+
+                    Console.WriteLine("Which Gym would you like to join? ");
+                    int homeClub = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine($"{name}, you selected: ");
+                    Club.ClubChoice(Club.clubList[homeClub - 1]);
+
+                    Console.WriteLine();
+                    Console.WriteLine("is this Correct? (yes or no) ");
+                    if (Console.ReadLine() == "yes")
+                    {
+                        int generateId = 10000000;
+                        generateId += 1;
+                        singleMembers.Add(new SingleMember(name, generateId));
+
+                        Console.WriteLine("to confirm your club number enter the club number one more time");
+                        MemberInfo();
+                        Console.WriteLine();
+                    }
+                }
+                else if (membershipType.ToLower() == "MultiClub")
+                {
+                    int generatedId = 2000000;
+                    generatedId += 1;
+                    MultiMember.multiMembers.Add(new MultiMember(name, generateId));
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a valid membership type");
+                }
+
             }
+
+        }
+
+
+
+        public static void MemberInfo()
+        {
+            int userinput = int.Parse(Console.ReadLine());
+            singleMembers.ForEach(x => Console.WriteLine($"Name: {x.Name} \nMember ID: {x.Id} \nMembership Type: Single \nHomeLocation: {Club.clubList[userinput - 1].Address}"));
+           //MultiMember.multiMembers.ForEach(x => Console.WriteLine($"{x.Name} {x.ID} {x.MembershipPoints}"));
 
         }
     }
