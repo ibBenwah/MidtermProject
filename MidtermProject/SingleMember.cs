@@ -26,7 +26,12 @@ namespace MidtermProject
         //  Methods
         public override void CheckIn()
         {
+            Console.WriteLine("Welcome! what is your ID number? ");
+            string id = Console.ReadLine();
+            if (id.ElementAt(id[]))
+            {
 
+            }
         }
 
 
@@ -73,7 +78,7 @@ namespace MidtermProject
                 {
                     int generatedId = 2000000;
                     generatedId += 1;
-                    MultiMember.multiMembers.Add(new MultiMember(name, generateId));
+                    MultiMember.multiMembers.Add(new MultiMember(name, generatedId));
                 }
                 else
                 {

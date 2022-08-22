@@ -26,10 +26,7 @@ namespace MidtermProject
 
         }
 
-        public static void AddMember()
-        {
-
-        }
+        
 
     }
 
