@@ -12,16 +12,18 @@ using System.Threading.Tasks;
 
 List<SingleClub> singleMemberList = new List<SingleClub>();
 List<MultiClub> multiClubMembers = new List<MultiClub>();
-List<Member> memberList = new List<Member>();
+List<Member> allMembers = new List<Member>();
 
 
-FitnessHandler.AddMember(1, "Garret", 1);
+FitnessHandler.AddMember(1, "Garret");
+FitnessHandler.AddMember(1, "kevin");
+FitnessHandler.AddMember(1, "Colin");
 
 
     FitnessHandler.MemberInfo();
 
 
-
+Club.DisplayClubInfo();
 
 // List<Club> clubInfo = new List<Club>();
 // List<Member> memberInfo = new List<Member>();

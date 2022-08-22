@@ -9,25 +9,25 @@ namespace MidtermProject
   public static class FitnessHandler
   {
     public static List<SingleClub> singleMemberList = new List<SingleClub>();
-    public static List<Member> memberList = new List<Member>();
+    public static List<Member> allMembers = new List<Member>();
     public static List<MultiClub> multiClubMembers = new List<MultiClub>();
 
 
 
-        public static void AddMember(int a, string b, int c)
+        public static void AddMember(int a, string b)
         {
-            if (c == 1)
+            if (a == 2)
             {
-                MultiClub temp = new MultiClub(a, b, c);
+                MultiClub temp = new MultiClub(a, b);
                 multiClubMembers.Add(temp);
-                memberList.Add(temp);
-                 ;
+                allMembers.Add(temp);
+                 a += 1;
             }
             else
             {
-                SingleClub temp2 = new SingleClub(a, b, c);
-                singleMemberList.Add(temp2);
-                memberList.Add(temp2);
+                SingleClub temp2 = new SingleClub(a, b);
+               // singleMemberList.Add(temp2);
+                allMembers.Add(temp2);
                 a++;
             }
         }
@@ -49,7 +49,7 @@ namespace MidtermProject
 
         public static void MemberInfo()
         {
-            foreach(Member m in memberList)
+            foreach(Member m in allMembers)
             {
                 Console.WriteLine($"{m.MemberID} {m.Name} {m.MembershipType}");
             }
@@ -59,12 +59,12 @@ namespace MidtermProject
         public static void RemoveMember(int id)
         {
             Console.WriteLine("Enter the ID of the member you would like to remove: ");
-            foreach (Member member in memberList)
+            foreach (Member member in allMembers)
             {
                 int idToRemove = int.Parse(Console.ReadLine());
                 if (member.MemberID == idToRemove)
                 {
-                    memberList.Remove(member);
+                    allMembers.Remove(member);
                 }
             }
         }

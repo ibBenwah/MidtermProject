@@ -15,12 +15,23 @@ namespace MidtermProject
             Name = name;
             MembershipType = membershipType;
         }
-        
+
+        public SingleClub()
+        {
+            MemberID = 0;
+            Name = "";
+            MembershipType = 0;
+        }
+
+        public SingleClub(int a, string b)
+        {
+        }
+
         public int MemberID { get; set; }
         public int MembershipType { get; set; }
         public int HomeMembershipID { get; set; }
-       
-        
+        public static List<SingleClub> singleMemberList = new List<SingleClub>();
+
 
 
 
@@ -56,6 +67,13 @@ namespace MidtermProject
         
         public override void CheckIn()
         {
+            foreach(var m in singleMemberList)
+            {
+                //if(Club. 0)
+                //{
+
+                //}
+            }
 
         }
     }
