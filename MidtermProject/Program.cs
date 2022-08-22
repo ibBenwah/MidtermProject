@@ -5,10 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-foreach (var member in SingleMember.singleMembers)
-{
-    Console.WriteLine($"{member.Name} {member.Id} {member.HomeClub}");
-}
+
 
 
 //SingleMember.CheckIn();
@@ -17,13 +14,15 @@ foreach (var member in SingleMember.singleMembers)
 
 bool continueprogram = true;
 
-Console.WriteLine("Welcome to the Fitness Center!");
+//Console.WriteLine("Welcome to the Fitness Center! what would you like to do? ");
+
 while (continueprogram = true)
 {
-    Console.WriteLine("Hello!  1:Join New Club 2:Check In 3:Add/Remove Members 4:Display Member Information 5: Pay Bills");
+    Console.WriteLine("Hello! Welcome to the Fitness Center! what would you like to do? \n1:Join New Club \n2:Check In \n3:Add/Remove Members \n4:Display Member Information \n5: Pay Bills");
     int userSelection = int.Parse(Console.ReadLine());
     if (userSelection == 1)
     {
+       
         FitnessHandler.AddMember();
 
 

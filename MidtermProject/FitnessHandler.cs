@@ -16,27 +16,38 @@ namespace MidtermProject
         //remove member based off ID
         public static void RemoveMember()
         {
-            Console.WriteLine("Enter the name of the member you would like to remove: ");
+            foreach (SingleMember s in singleMemberList)
+            {
+                
+            }
+            
+            
+            //Console.WriteLine("Enter the name of the member you would like to remove: ");
+            //string userInput = Console.ReadLine();
+            //var singleNameToRemove = singleMemberList.Single(x => x.Name.Equals(userInput));
+            //singleMemberList.Remove(singleNameToRemove);
+            //var doubleleNameToRemove = multiClubMembers.Single(x => x.Name == Console.ReadLine());
+            //multiClubMembers.Remove(doubleleNameToRemove);
 
-            var nameToRemove = Console.ReadLine().ToLower();
-            int singleIndex = singleMemberList.FindIndex(member => member.Name.ToLower() == nameToRemove);
-            int multiIndex = multiClubMembers.FindIndex(member => member.Name.ToLower() == nameToRemove);
-            if (singleIndex != -1)
-            {
-                singleMemberList.RemoveAt(singleIndex);
-            }
-            if (multiIndex != -1)
-            {
-                multiClubMembers.RemoveAt(multiIndex);
-            }
-            else Console.WriteLine("Error, invalid member");
+
+            //int singleIndex = singleMemberList.FindIndex(member => member.Name.ToLower(), singleMemberList.Remove(singleMemberList[nameToRemove]), );
+            //int multiIndex = multiClubMembers.FindIndex(member => member.Name.ToLower() == nameToRemove);
+            //if (singleNameToRemove is ())
+            //{
+            //    singleMemberList.RemoveAt();
+            //}
+            //if (multiIndex != -1)
+            //{
+            //    multiClubMembers.RemoveAt(multiIndex);
+            //}
+            //else Console.WriteLine("Error, invalid member");
         }
 
         public static void MemberInfo()
         {
             //what is user input doing?
-            int userinput = int.Parse(Console.ReadLine());
-            SingleMember.singleMembers.ForEach(x => Console.WriteLine($"Name: {x.Name} \nMember ID: {x.Id} \nMembership Type: Single \nHomeLocation: {Club.clubList[userinput - 1].Address}"));
+            //int userinput = int.Parse(Console.ReadLine());
+            SingleMember.singleMembers.ForEach(x => Console.WriteLine($"Name: {x.Name} \nMember ID: {x.Id} \nMembership Type: Single \nHomeLocation: {Club.clubList[x.HomeClub - 1].Address}"));
             MultiMember.multiMembers.ForEach(x => Console.WriteLine($"{x.Name} {x.Id} {x.MembershipPoints}"));
 
         }
@@ -52,8 +63,8 @@ namespace MidtermProject
 
             bool isAddingMember = true;
 
-            while (isAddingMember)
-            {
+            
+            
 
                 if (membershipType == "Single")
                 {
@@ -77,7 +88,7 @@ namespace MidtermProject
                         Console.WriteLine("to confirm your club number enter the club number one more time");
                         int clubChoice = int.Parse(Console.ReadLine());
                         homeClub = clubChoice;
-                        SingleMember.MemberInfo();
+                        MemberInfo();
                         Console.WriteLine();
                     }
                 }
@@ -95,28 +106,4 @@ namespace MidtermProject
             }
 
         }
-        ////List<MultiClub> multiClubMembers = new List<MultiClub>();
-        ////List<SingleClub> singleClubMembers  = new List<SingleClub>();
-        ////public void AddMembersMulti(int id, string name)
-        ////{
-        ////    multiClubMembers.Add(new MultiClub(id, name));
-        ////}
-
-        ////public void AddMembersSingle(int id, string name, Club club)
-        ////{
-        ////    singleClubMembers.Add(new SingleClub(id, name, club));
-        ////}
-
-        //public void RemoveMembers()
-        //{
-        //    int personIndex = multiClubMembers.FindIndex(x => x.Name.Contains(x.Name[x.Name.Length - 1]));
-        //}
-
-        ////public void MemberInfo()
-        ////{
-
-        ////}
-
-
     }
-}
