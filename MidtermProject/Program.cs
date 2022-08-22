@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 //Console.WriteLine("Would you like to select a club or a member?");
 // string userInput = Console.ReadLine();
 
-
+SingleMember.CheckIn();
 SingleMember.AddMember();
 //SingleMember.MemberInfo();
 

@@ -26,12 +26,18 @@ namespace MidtermProject
         //  Methods
         public override void CheckIn()
         {
-            Console.WriteLine("Welcome! what is your ID number? ");
-            string id = Console.ReadLine();
-            if (id.ElementAt(id[]))
+            Console.WriteLine("Welcome! what is your name? ");
+            var name = Console.ReadLine().ToLower();
+            List<SingleMember> checkSingleMembers = singleMembers.Where(x => x.Name.ToLower().Equals(name)).ToList();
+            if(checkSingleMembers.Count == 1)
             {
-
+                Console.WriteLine("Enjoy your workout!");
             }
+            else if (checkSingleMembers.Count != 1)
+            {
+                Console.WriteLine("Please try to check in again, if you are not a member please join!");
+            }//not 100% sure if this is on the right path but i feel like it is.  adds name to a new list if matches and if theres 1 name it works, not 1 then it stops
+           
         }
 
 
